@@ -2,7 +2,7 @@
 # You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
 
 # Start with the provisioning script from Tutorial #2
-- include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml
+- include: https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml
 
 # Augmented-Search dependencies are only available from Jahia store
 # So we're adding a new repository to be able to resolve these dependencies
@@ -10,10 +10,10 @@
 
 # Install and start bundles for Augmented Search
 - installBundle:
-  - 'mvn:org.jahia.modules/augmented-search/3.3.3'
-  - 'mvn:org.jahia.modules/augmented-search-ui/3.0.3'
   - 'mvn:org.jahia.modules/database-connector/1.5.0'
   - 'mvn:org.jahia.modules/elasticsearch-connector/3.2.0'
+  - 'mvn:org.jahia.modules/augmented-search/3.3.3'
+  - 'mvn:org.jahia.modules/augmented-search-ui/3.0.3'
   autoStart: true
   uninstallPreviousVersion: true
 
@@ -22,16 +22,16 @@
   site: "digitall"
 
 # Configure database connector with a groovy script
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/db-connection.groovy"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/03-augmented-search/db-connection.groovy"
 
 # Configure Augmented Search and digitall
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
 
 # Add Augmented-Search UI module below the slider in Digitall home
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
 
 # Publish Augmented-Search UI
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/publish-search-ui.graphql"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/03-augmented-search/publish-search-ui.graphql"
 
 # Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-tutorials/main/03-augmented-search/as-index.graphql"

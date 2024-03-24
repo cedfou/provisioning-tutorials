@@ -1,1 +1,1 @@
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
+- executeScript: "https://raw.githubusercontent.com/cedfou/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
